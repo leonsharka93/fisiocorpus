@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisioCorpus | Rikupero Trupin tënd me Fizioterapi Profesionale</title>
+    <meta name="description" content="FisioCorpus - Fizioterapi profesionale në Tiranë. Limfodrenazh, hernie diskale, masazh, rehabilitim post operator dhe më shumë.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader-logo">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 70 C25 50, 20 30, 35 15 C40 10, 50 10, 55 15 C60 20, 55 30, 50 40" stroke="rgba(255,255,255,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M50 40 C55 50, 65 55, 75 45 C80 40, 80 35, 75 30" stroke="rgba(255,255,255,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M50 40 C45 55, 40 70, 50 85 C55 92, 60 90, 65 80" stroke="rgba(107,203,119,0.9)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <circle cx="45" cy="12" r="5" fill="rgba(255,255,255,0.9)"/>
+            </svg>
+        </div>
+        <div class="loader-bar-container">
+            <div class="loader-bar" id="loaderBar"></div>
+        </div>
+        <div class="loader-text">Duke ngarkuar...</div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#ballina" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 70 C25 50, 20 30, 35 15 C40 10, 50 10, 55 15 C60 20, 55 30, 50 40" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none" style="color: var(--primary)"/>
+                    <path d="M50 40 C55 50, 65 55, 75 45 C80 40, 80 35, 75 30" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none" style="color: var(--primary)"/>
+                    <path d="M50 40 C45 55, 40 70, 50 85 C55 92, 60 90, 65 80" stroke="currentColor" stroke-width="6" stroke-linecap="round" fill="none" style="color: var(--secondary)"/>
+                    <circle cx="45" cy="12" r="6" fill="var(--primary)"/>
+                </svg>
+                <div>
+                    <div class="nav-logo-text">Fisio<span style="color: var(--secondary)">Corpus</span></div>
+                    <div class="nav-logo-sub">Trupi · Mendja · Rikuperimi</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#ballina">Ballina</a></li>
+                <li><a href="#sherbimet">Shërbimet</a></li>
+                <li><a href="#rreth-nesh">Rreth Nesh</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#kontakt" class="nav-cta">Rezervo Takim</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#ballina" class="mobile-link">Ballina</a>
+        <a href="#sherbimet" class="mobile-link">Shërbimet</a>
+        <a href="#rreth-nesh" class="mobile-link">Rreth Nesh</a>
+        <a href="#kontakt" class="mobile-link">Kontakt</a>
+        <a href="#kontakt" class="mobile-link" style="background: linear-gradient(135deg, var(--secondary), var(--primary)); border-radius: 50px; margin-top: 16px;">Rezervo Takim</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="ballina">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-yXWtUNEuiJ8?w=1920&q=80" alt="Fizioterapi profesionale">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    Trajtim i Specializuar
+                </div>
+                <h1 class="hero-title">
+                    Rikupero trupin tënd me <span>fizioterapi profesionale</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Fokus në rikthimin e funksionit dhe jo vetëm largimin e dhimbjes. Qasje holistike për shëndetin tuaj — trupi, mendja dhe rikuperimi i plotë.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#kontakt" class="btn-primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Rezervo Takim Falas
+                    </a>
+                    <a href="#sherbimet" class="btn-secondary">
+                        <i class="fas fa-arrow-down"></i>
+                        Shërbimet Tona
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?q=80&w=1170&auto=format&fit=crop" alt="Trajtim fizioterapie">
+                    <div class="hero-image-overlay">
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">15+</div>
+                                <div class="hero-stat-label">Vite Eksperiencë</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">3000+</div>
+                                <div class="hero-stat-label">Pacientë të Kuruar</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number">98%</div>
+                                <div class="hero-stat-label">Kënaqësi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-float-card card-1">
+                    <div class="float-card-icon green">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <div class="float-card-title">Trajtim Personalizuar</div>
+                    <div class="float-card-text">Për çdo pacient individual</div>
+                </div>
+
+                <div class="hero-float-card card-2">
+                    <div class="float-card-icon blue">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="float-card-title">Të Certifikuar</div>
+                    <div class="float-card-text">Personel i specializuar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="sherbimet">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    Shërbimet Tona
+                </div>
+                <h2 class="section-title">Trajtime të <span>Specializuara</span></h2>
+                <p class="section-desc">Ofrojmë një gamë të gjerë trajtimesh fizioterapeutike për rikthimin e plotë të funksionit dhe lehtësimin e dhimbjes.</p>
+            </div>
+
+            <h3 class="services-group-title animate-on-scroll">Trajtime Manual & Masazh</h3>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="service-icon blue"><i class="fas fa-hands"></i></div>
+                    <h3 class="service-title">Fizioterapi</h3>
+                    <p class="service-desc">Trajtime fizioterapeutike të personalizuara për rikthimin e lëvizjes dhe funksionit të plotë të trupit.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="service-icon green"><i class="fas fa-spa"></i></div>
+                    <h3 class="service-title">Masazh Terapeutik</h3>
+                    <p class="service-desc">Masazh profesional për lehtësimin e tensionit muskulor, përmirësimin e qarkullimit dhe rikuperimin.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="service-icon teal"><i class="fas fa-water"></i></div>
+                    <h3 class="service-title">Limfodrenazh</h3>
+                    <p class="service-desc">Teknikë e specializuar për stimulimin e sistemit limfatik, zvogëlimin e ënjtjeve dhe përmirësimin e imunitetit.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-4">
+                    <div class="service-icon blue"><i class="fas fa-circle-dot"></i></div>
+                    <h3 class="service-title">Terapi me Kupa</h3>
+                    <p class="service-desc">Trajtim tradicional me kupa për lehtësimin e dhimbjeve, përmirësimin e qarkullimit dhe çlirimin e toksinave.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-5">
+                    <div class="service-icon green"><i class="fas fa-leaf"></i></div>
+                    <h3 class="service-title">Hixhame</h3>
+                    <p class="service-desc">Trajtim me hixhame (cupping therapy) për çlirimin e tensioneve dhe përmirësimin e shëndetit të përgjithshëm.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-6">
+                    <div class="service-icon teal"><i class="fas fa-hand-fist"></i></div>
+                    <h3 class="service-title">Shiatik</h3>
+                    <p class="service-desc">Trajtim i specializuar për nervin shiatik, duke lehtësuar dhimbjen dhe përmirësuar lëvizjen e këmbëve.</p>
+                </div>
+            </div>
+
+            <h3 class="services-group-title animate-on-scroll">Trajtime Ortopedike & Artikulare</h3>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="service-icon blue"><i class="fas fa-bone"></i></div>
+                    <h3 class="service-title">Hernie Diskale</h3>
+                    <p class="service-desc">Trajtim i specializuar për hernie diskale me teknika manuale dhe ushtrime rehabilituese për lehtësim të qëndrueshëm.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="service-icon green"><i class="fas fa-kitchen-set"></i></div>
+                    <h3 class="service-title">Gonoartrozë</h3>
+                    <p class="service-desc">Trajtim për artrozën e gjurit me ushtrime specifike dhe terapi manuale për rikthimin e funksionit.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="service-icon teal"><i class="fas fa-person-walking"></i></div>
+                    <h3 class="service-title">Spondiloartrozë Cervikale</h3>
+                    <p class="service-desc">Trajtim i qafës për artrozën cervikale, duke lehtësuar dhimbjen dhe përmirësuar lëvizshmërinë.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-4">
+                    <div class="service-icon blue"><i class="fas fa-shoe-prints"></i></div>
+                    <h3 class="service-title">Menisk</h3>
+                    <p class="service-desc">Rehabilitim i meniskut me ushtrime progresive dhe terapi manuale për rikthimin e funksionit të gjurit.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-5">
+                    <div class="service-icon green"><i class="fas fa-band-aid"></i></div>
+                    <h3 class="service-title">Ligamente</h3>
+                    <p class="service-desc">Trajtim i dëmtimeve të ligamenteve me rehabilitim të personalizuar për rikthimin e qëndrueshmërisë.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-6">
+                    <div class="service-icon teal"><i class="fas fa-hand"></i></div>
+                    <h3 class="service-title">Tuneli Karpal</h3>
+                    <p class="service-desc">Trajtim për sindromën e tunelit karpal me teknika specifike për lehtësimin e dhimbjes së kyçit të dorës.</p>
+                </div>
+            </div>
+
+            <h3 class="services-group-title animate-on-scroll">Rehabilitim & Neurologji</h3>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="service-icon blue"><i class="fas fa-brain"></i></div>
+                    <h3 class="service-title">Paralizë</h3>
+                    <p class="service-desc">Rehabilitim i specializuar për pacientë me paralizë, duke fokusuar në rikthimin e funksionit motorik.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="service-icon green"><i class="fas fa-heart-circle-bolt"></i></div>
+                    <h3 class="service-title">Ishemi Cerebrale</h3>
+                    <p class="service-desc">Trajtim rehabilitues pas ishemit cerebral për rikthimin e funksioneve fizike dhe njohëse.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="service-icon teal"><i class="fas fa-user-doctor"></i></div>
+                    <h3 class="service-title">Rehabilitim Post Operator</h3>
+                    <p class="service-desc">Program i plotë rehabilitues pas operacioneve ortopedike dhe kirurgjikale për rikuperim optimal.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-4">
+                    <div class="service-icon blue"><i class="fas fa-notes-medical"></i></div>
+                    <h3 class="service-title">Paraliza të Ndryshme</h3>
+                    <p class="service-desc">Trajtime të specializuara për lloje të ndryshme paralizash me programe rehabilituese individuale.</p>
+                </div>
+            </div>
+
+            <h3 class="services-group-title animate-on-scroll">Trajtime Posturale & Artikulare</h3>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll delay-1">
+                    <div class="service-icon green"><i class="fas fa-arrows-spin"></i></div>
+                    <h3 class="service-title">Skoliozë</h3>
+                    <p class="service-desc">Trajtim i specializuar për skoliozë me ushtrime korrigjuese dhe terapi manuale për përmirësimin e pozicionit.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-2">
+                    <div class="service-icon teal"><i class="fas fa-arrows-up-down"></i></div>
+                    <h3 class="service-title">Kifozë</h3>
+                    <p class="service-desc">Rehabilitim për kifozë me ushtrime forcuese dhe teknika korrigjuese për përmirësimin e posturës.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-3">
+                    <div class="service-icon blue"><i class="fas fa-person-walking-with-cane"></i></div>
+                    <h3 class="service-title">Artrozë</h3>
+                    <p class="service-desc">Trajtim i artrozës në kyçe të ndryshme me terapi manuale dhe ushtrime për ruajtjen e lëvizshmërisë.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-4">
+                    <div class="service-icon green"><i class="fas fa-circle-xmark"></i></div>
+                    <h3 class="service-title">Bursit</h3>
+                    <p class="service-desc">Trajtim i bursitit me teknika anti-inflamatore dhe ushtrime specifike për rikthimin e funksionit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="rreth-nesh">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container animate-on-scroll">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9jdG9yfGVufDB8fDB8fHww" alt="Fizioterapist profesional">
+                    </div>
+                    <div class="about-experience-badge">
+                        <div class="about-experience-number">15+</div>
+                        <div class="about-experience-text">Vite Eksperiencë</div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-badge animate-on-scroll">
+                        <i class="fas fa-user-md"></i>
+                        Rreth Nesh
+                    </div>
+                    <h2 class="section-title animate-on-scroll">
+                        Dedikuar <span>shëndetit</span> dhe rikuperimit tuaj
+                    </h2>
+                    <p class="about-text animate-on-scroll">
+                        Ne jemi një ekip i specializuar fizioterapistësh me mbi 15 vjet eksperiencë në trajtimin e pacientëve me probleme të ndryshme muskuloskeletale dhe neurologjike. Qasja jonë është e bazuar në trajtimin e plotë të pacientit — duke adresuar jo vetëm simptomat, por edhe shkaqet rrënjësore të problemeve.
+                    </p>
+                    <p class="about-text animate-on-scroll">
+                        Besojmë se çdo pacient është unik dhe meriton një plan trajtimi të personalizuar. Nga limfodrenazhi te rehabilitimi post-operator, nga trajtimi i hernies diskale te terapia me kupa dhe hixhame — ne ofrojmë shërbime gjithëpërfshirëse për rikuperimin tuaj të plotë.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature animate-on-scroll delay-1">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trajtim i personalizuar</span>
+                        </div>
+                        <div class="about-feature animate-on-scroll delay-2">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personel i certifikuar</span>
+                        </div>
+                        <div class="about-feature animate-on-scroll delay-3">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Teknologji moderne</span>
+                        </div>
+                        <div class="about-feature animate-on-scroll delay-4">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Rezultate të provuara</span>
+                        </div>
+                        <div class="about-feature animate-on-scroll delay-5">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Qasje holistike</span>
+                        </div>
+                        <div class="about-feature animate-on-scroll delay-6">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Kujdes me përkushtim</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    Pse Ne
+                </div>
+                <h2 class="section-title">Pse të zgjidhni <span style="color: var(--secondary)">FisioCorpus</span></h2>
+                <p class="section-desc">Ne ofrojmë një qasje tërësore për shëndetin tuaj, duke kombinuar ekspertizën profesionale me teknologjinë moderne.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll delay-1">
+                    <div class="benefit-icon"><i class="fas fa-user-check"></i></div>
+                    <h3 class="benefit-title">Trajtim i Personalizuar</h3>
+                    <p class="benefit-text">Çdo pacient merr një plan trajtimi të krijuar posaçërisht për nevojat e tij specifike dhe objektivat e rikuperimit.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll delay-2">
+                    <div class="benefit-icon"><i class="fas fa-medal"></i></div>
+                    <h3 class="benefit-title">Eksperiencë Profesionale</h3>
+                    <p class="benefit-text">Mbi 15 vjet përvojë në trajtimin e hernies diskale, paralizës, gonoartrozës, ishemit cerebral dhe më shumë.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll delay-3">
+                    <div class="benefit-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 class="benefit-title">Teknologji Moderne</h3>
+                    <p class="benefit-text">Përdorim pajisje dhe teknika të fundit në fizioterapi për rezultate më të shpejta dhe më efektive.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll delay-4">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="benefit-title">Rezultate të Provuara</h3>
+                    <p class="benefit-text">98% e pacientëve tanë raportojnë përmirësime të dukshme që nga seanca e parë e trajtimit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Approach Section -->
+    <section class="section approach">
+        <div class="container">
+            <div class="approach-grid">
+                <div class="approach-content">
+                    <div class="section-badge animate-on-scroll">
+                        <i class="fas fa-route"></i>
+                        Procesi Ynë
+                    </div>
+                    <h2 class="section-title animate-on-scroll">
+                        Si <span>funksionon</span> trajtimi
+                    </h2>
+                    <p class="section-desc animate-on-scroll" style="text-align: left; margin: 0 0 36px;">
+                        Qasja jonë e trajtimit është e bazuar në katër faza kryesore, duke siguruar rikuperim të plotë dhe afatgjatë për çdo pacient.
+                    </p>
+
+                    <div class="approach-steps">
+                        <div class="approach-step animate-on-scroll delay-1">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h4>Vlerësimi i Plotë</h4>
+                                <p>Analizë e detajuar e gjendjes suaj fizike, historikut mjekësor dhe nevojave specifike të trajtimit.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step animate-on-scroll delay-2">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h4>Planifikimi i Trajtimit</h4>
+                                <p>Krijimi i një plani të personalizuar trajtimi që kombinon teknika manuale, ushtrime dhe terapi moderne.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step animate-on-scroll delay-3">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h4>Zbatimi i Terapisë</h4>
+                                <p>Ekzekutimi i trajtimit me kujdes profesional — fizioterapi, masazh, terapi me kupa, hixhame ose rehabilitim post operator.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step animate-on-scroll delay-4">
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <h4>Monitorimi & Pasimi</h4>
+                                <p>Monitorim i vazhdueshëm i progresit dhe përshtatje e trajtimit për rezultate maksimale dhe parandalim rikthimesh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="approach-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1706353399656-210cca727a33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGh5c2lvdGhlcmFweXxlbnwwfHwwfHx8MA%3D%3D" alt="Trajtim fizioterapie">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left"></i>
+                    Dëshmitë
+                </div>
+                <h2 class="section-title">Çfarë thonë <span>pacientët</span> tanë</h2>
+                <p class="section-desc">Histori reale të rikuperimit nga pacientë që kanë besuar tek ne për trajtimin e tyre fizioterapeutik.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll delay-1">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Pas viteve me dhimbje nga hernie diskale, më në fund gjeta lehtësim. Trajtimi i personalizuar dhe kujdesi i jashtëzakonshëm më kthyen jetën normale. Faleminderit!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80" alt="Fatmira K.">
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Fatmira K.</div>
+                            <div class="testimonial-role">Paciente - Hernie Diskale</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll delay-2">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Rehabilitimi pas operacionit të gjurit ishte i shkëlqyer. Ekipi profesional më ndihmoi të rikthehem në aktivitetet e përditshme shumë më shpejt se sa prisja.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="Agron M.">
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Agron M.</div>
+                            <div class="testimonial-role">Pacient - Rehabilitim Post Operator</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll delay-3">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">Limfodrenazhi dhe masazhi terapeutik ndryshuan plotësisht gjendjen time. Ndihem më e lehtë, më energjike dhe pa dhimbje. Rekomandoj me gjithë zemër!</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80" alt="Drita S.">
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Drita S.</div>
+                            <div class="testimonial-role">Paciente - Limfodrenazh & Masazh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="kontakt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">
+                    <i class="fas fa-phone-volume"></i>
+                    Kontakt
+                </div>
+                <h2 class="section-title">Na <span>kontaktoni</span></h2>
+                <p class="section-desc">Jeni gati të filloni udhëtimin e rikuperimit? Na kontaktoni për një konsultim falas.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left: Contact Info -->
+                <div class="contact-info">
+                    <!-- Phone -->
+                    <div class="contact-info-card animate-on-scroll delay-1">
+                        <div class="contact-info-icon blue">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="contact-info-title">Telefon</div>
+                            <div class="contact-info-text">
+                                <a href="tel:0672609589">067 260 9589</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="contact-info-card animate-on-scroll delay-2">
+                        <div class="contact-info-icon green">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <div class="contact-info-title">Orar</div>
+                            <div class="contact-info-text">
+                                E Hënë - E Premte: 08:00 - 20:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="contact-info-card animate-on-scroll delay-3">
+                        <div class="contact-info-icon blue">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="contact-info-title">Adresa</div>
+                            <div class="contact-info-text">
+                                Rruga Don Bosko, Pallati Noka, nr 1, Tiranë, 1001
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="contact-actions animate-on-scroll delay-4">
+                        <a href="https://wa.me/0672609589" target="_blank" rel="noopener noreferrer" class="contact-action-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                            WhatsApp
+                        </a>
+                        <a href="tel:0672609589" class="contact-action-btn call-btn">
+                            <i class="fas fa-phone"></i>
+                            Telefono
+                        </a>
+                        <a href="https://www.instagram.com/ediqato?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="contact-action-btn instagram-btn">
+                            <i class="fab fa-instagram" style="font-size: 20px;"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Map Section -->
+                <div class="contact-map-wrapper animate-on-scroll delay-2">
+                    <div class="contact-map-header">
+                        <h3><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 8px;"></i> Vendndodhja Jonë</h3>
+                        <p>FisioCorpus — Tiranë, Shqipëri</p>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.2!2d19.804306!3d41.336528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIwJzExLjUiTiAxOcKwNDgnMTUuNSJF!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Harta e vendndodhjes FisioCorpus">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#ballina" class="nav-logo" style="margin-bottom: 8px;">
+                        <svg class="nav-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+                            <path d="M30 70 C25 50, 20 30, 35 15 C40 10, 50 10, 55 15 C60 20, 55 30, 50 40" stroke="var(--primary)" stroke-width="6" stroke-linecap="round" fill="none"/>
+                            <path d="M50 40 C55 50, 65 55, 75 45 C80 40, 80 35, 75 30" stroke="var(--primary)" stroke-width="6" stroke-linecap="round" fill="none"/>
+                            <path d="M50 40 C45 55, 40 70, 50 85 C55 92, 60 90, 65 80" stroke="var(--secondary)" stroke-width="6" stroke-linecap="round" fill="none"/>
+                            <circle cx="45" cy="12" r="6" fill="var(--primary)"/>
+                        </svg>
+                        <div>
+                            <div class="nav-logo-text" style="color: #fff;">Fisio<span style="color: var(--secondary)">Corpus</span></div>
+                        </div>
+                    </a>
+                    <p class="footer-brand-text">
+                        Dedikuar rikuperimit të plotë të pacientëve me qasje holistike — trupi, mendja dhe shëndeti. Ofrojmë fizioterapi, limfodrenazh, masazh, terapi me kupa dhe rehabilitim post operator.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/0672609589" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/ediqato?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="tel:0672609589" aria-label="Telefon"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Lidhje të Shpejta</h4>
+                    <ul class="footer-links">
+                        <li><a href="#ballina"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Ballina</a></li>
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Shërbimet</a></li>
+                        <li><a href="#rreth-nesh"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Rreth Nesh</a></li>
+                        <li><a href="#kontakt"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Shërbimet</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Fizioterapi</a></li>
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Limfodrenazh</a></li>
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Masazh</a></li>
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Terapi me Kupa</a></li>
+                        <li><a href="#sherbimet"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> Rehabilitim</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Kontakti i Shpejtë</h4>
+                    <p class="footer-brand-text" style="margin-top: 0;">
+                        Na shkruani në WhatsApp ose na telefononi për rezervim takimi.
+                    </p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px;">
+                        <a href="https://wa.me/355672609589" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #25D366; color: white; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; transition: var(--transition-fast);">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="tel:0672609589" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--primary); color: white; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; transition: var(--transition-fast);">
+                            <i class="fas fa-phone"></i> 067 260 9589
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2024 FisioCorpus. Të gjitha të drejtat e rezervuara.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Politika e Privatësisë</a>
+                    <a href="#">Kushtet e Përdorimit</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kthehu lart">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
